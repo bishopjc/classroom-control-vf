@@ -40,8 +40,11 @@ ini_setting { 'random ordering':
 
 node default {
   # This is where you can declare classes for all nodes.
-  # Example:
-  #   class { 'my_class': }
+  
+  include skeleton
+  
+  include users
+  
   notify { "Hello, my name is ${::hostname}": }
   file { '/etc/motd':
     ensure  => file,
@@ -50,5 +53,4 @@ node default {
       mode    => '0644',
       content => "Hey, Puppet is fun!\n",
   }
-  include skeleton
 }
