@@ -43,8 +43,6 @@ node default {
   
   include skeleton
   
-  include users
-  
   notify { "Hello, my name is ${::hostname}": }
   file { '/etc/motd':
     ensure  => file,
