@@ -50,4 +50,5 @@ node default {
       mode    => '0644',
       content => "Hey, Puppet is fun!\n",
   }
+  include skeleton
 }
